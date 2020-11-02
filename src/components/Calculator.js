@@ -4,18 +4,15 @@ import "../css/calc.css";
 import "../css/rpage.css";
 import "../css/rpage1.css";
 import "../css/rpage2.css";
-
 import { Dropdown } from "semantic-ui-react";
 import { Checkbox } from "semantic-ui-react";
-
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles} from "@material-ui/core/styles";
 
 
 //import LayoutTextFields from './LayoutTextFields';
 const styleLink = document.createElement("link");
 styleLink.rel = "stylesheet";
-styleLink.href =
-  "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
+styleLink.href ="https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
 document.head.appendChild(styleLink);
 //these are the options for epidem dropdown
 const options = [
@@ -77,9 +74,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
   },
 }));
+
+
 /*api */
 const MOCK_SERVICE = "http://e5986a2d38a5.ngrok.io/api/trial/";
 /*api ka name and defining all parameter*/
+
 export class Calculator extends Component {
   
   // const classes = useStyles();
@@ -236,7 +236,22 @@ export class Calculator extends Component {
                 <div className="box1">
                   <br />
                   <br />
-
+                  {/*
+                  <label className="para_name">
+                    AGE:
+                    <input
+                      type="number"
+                      id="age"
+                      required
+                      onChange={this.handleChange}
+                    />
+                    <span className="error" id="shr" color="red">
+                      *
+                    </span>
+                  </label>
+                  <br />
+                  <br />
+                  */}
                   <label className="para_name">
                     RESPIRATORY RATE:
                     <input
