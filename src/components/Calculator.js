@@ -6,13 +6,13 @@ import "../css/rpage1.css";
 import "../css/rpage2.css";
 import { Dropdown } from "semantic-ui-react";
 import { Checkbox } from "semantic-ui-react";
-import { makeStyles} from "@material-ui/core/styles";
-
+import { makeStyles } from "@material-ui/core/styles";
 
 //import LayoutTextFields from './LayoutTextFields';
 const styleLink = document.createElement("link");
 styleLink.rel = "stylesheet";
-styleLink.href ="https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
+styleLink.href =
+  "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
 document.head.appendChild(styleLink);
 //these are the options for epidem dropdown
 const options = [
@@ -75,13 +75,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 /*api */
 const MOCK_SERVICE = "http://e5986a2d38a5.ngrok.io/api/trial/";
 /*api ka name and defining all parameter*/
 
 export class Calculator extends Component {
-  
   // const classes = useStyles();
   constructor() {
     super();
@@ -177,7 +175,22 @@ export class Calculator extends Component {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({spo,heartrate,drpdownValue,ddimer,cpk,crp,ldh,tropo,ferr,absolute,ctscan,abg,age,resrate}),
+        body: JSON.stringify({
+          spo,
+          heartrate,
+          drpdownValue,
+          ddimer,
+          cpk,
+          crp,
+          ldh,
+          tropo,
+          ferr,
+          absolute,
+          ctscan,
+          abg,
+          age,
+          resrate,
+        }),
       })
         .then((response) => console.log(response))
         .then((data) => {
@@ -192,7 +205,6 @@ export class Calculator extends Component {
   render() {
     const hidden = this.state.checked ? "" : "hidden";
     return (
-      
       <div>
         &lt;
         <title>Risk Calculator</title>
@@ -201,7 +213,6 @@ export class Calculator extends Component {
             <h1>RISK CALCULATOR</h1>
           </div>
           <div className="Image-container">
-            
             <div className="putto">
               <h4>
                 This web based risk calculator estimates the risk of cytokine
@@ -214,7 +225,6 @@ export class Calculator extends Component {
             </div>
           </div>
 
-          
           <form onSubmit={this.handleSubmit} className="form">
             <div className="para-container">
               <div className="epidem-container col-md-6 col-sm-12 width=30% ">
@@ -307,14 +317,14 @@ export class Calculator extends Component {
                     <div className="col-3 col-md-2 mb-1">
                       <h1 className="head">LABORATORY FINDINGS</h1>
                       <div className="box2">
-                      <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div style={{ display: "flex", flexDirection: "row" }}>
                           <label className="para_name">
                             DDIMER:
                             <span className="error" id="sage" color="red">
                               *
                             </span>
                           </label>
-                        
+
                           <input
                             placeholder="DDIMER"
                             color="red"
@@ -331,20 +341,18 @@ export class Calculator extends Component {
                             <option value={1}>g/mL</option>
                             <option value={2}>ml/ml</option>
                           </select>
-
-                        
                         </div>
                         <br />
                         <br />
-                        
+
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          CPK:
-                          <span className="error" id="sage" color="red">
-                          *
-                          </span>
-                         </label>
-                      
+                          <label className="para_name">
+                            CPK:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
+
                           <input
                             type="number"
                             id="cpk"
@@ -359,16 +367,16 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>G/L</option>
                           </select>
-                         </div>
+                        </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          CRP:
-                          <span className="error" id="sage" color="red">
-                            *
-                          </span>
-                        </label>
+                          <label className="para_name">
+                            CRP:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
                           <input
                             type="number"
                             id="crp"
@@ -383,17 +391,16 @@ export class Calculator extends Component {
                             <option value={1}>mg/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                          
                         </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          LDH:
-                          <span className="error" id="sage" color="red">
-                          *
-                        </span>
-                      </label>
+                          <label className="para_name">
+                            LDH:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
                           <input
                             type="number"
                             id="ldh"
@@ -408,17 +415,16 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                         
                         </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          Troponin:
-                          <span className="error" id="sage" color="red">
-                          *
-                        </span>
-                      </label>
+                          <label className="para_name">
+                            Troponin:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
                           <input
                             type="number"
                             id="tropo"
@@ -433,18 +439,16 @@ export class Calculator extends Component {
                             <option value={1}>ng/ml</option>
                             <option value={2}>g/mL</option>
                           </select>
-                         
                         </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          Ferritin:
-
-                          <span className="error" id="sage" color="red">
-                          *
-                        </span>
-                      </label>
+                          <label className="para_name">
+                            Ferritin:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
                           <input
                             type="number"
                             id="ferr"
@@ -459,17 +463,16 @@ export class Calculator extends Component {
                             <option value={1}>g/L</option>
                             <option value={2}>mg/L</option>
                           </select>
-                         
                         </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          Absolute LC:
-                          <span className="error" id="sage" color="red">
-                            *
-                          </span>
-                        </label>
+                          <label className="para_name">
+                            Absolute LC:
+                            <span className="error" id="sage" color="red">
+                              *
+                            </span>
+                          </label>
                           <input
                             type="number"
                             id="absolute"
@@ -484,13 +487,10 @@ export class Calculator extends Component {
                             <option value={2}>g/L</option>
                           </select>
                           <br />
-                          
                         </div>
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          CT SCAN:
-                          </label>
+                          <label className="para_name">CT SCAN:</label>
                           <input type="ctscan" id="ctscan" />
                           <select
                             id="measure_ctscan"
@@ -500,15 +500,11 @@ export class Calculator extends Component {
                             <option value={1}>U/L</option>
                             <option value={2}>g/L</option>
                           </select>
-                        
                         </div>
                         <br />
                         <br />
                         <div style={{ display: "flex", flexDirection: "row" }}>
-                        <label className="para_name">
-                          ABG    :
-                          </label>
-                          
+                          <label className="para_name">ABG :</label>
                           <input
                             type="number"
                             id="abg"
@@ -524,9 +520,7 @@ export class Calculator extends Component {
                           </select>
                           <br />
                           (P / F ratio)
-                        
                         </div>
-                        
                       </div>
                     </div>
                   </div>
@@ -551,8 +545,7 @@ export class Calculator extends Component {
               feedback
             </marquee>
           </a>
-          
-         
+
           <div className="information">
             <pre>
               Moderate and high risk patients require aggressive monitoring of

@@ -60,7 +60,7 @@ export class About extends Component {
             </div>
           </section>
           <div className="row1">
-              {/*<div className="flex-center">
+            {/*<div className="flex-center">
               <a href>
                 <i className="fa fa-github fa-4x icon-3d" />
               </a>
@@ -74,18 +74,24 @@ export class About extends Component {
                 <i className="fa fa-twitter fa-4x icon-3d" />
               </a>
               </div>*/}
-              <div className="flex-center">
+            <div className="flex-center">
               <div style={{ display: "flex", flexDirection: "row" }}>
-            <div className="left">
-              <h3>MISSION</h3>
-              <p>lorel ipsum jdbjfkwrle kdnfn dknfjerlfd fdjdsflk dfjndsan f v uihjhjjkhh kkj jkh  kj kb jk ku </p>
+                <div className="left">
+                  <h3>MISSION</h3>
+                  <p>
+                    lorel ipsum jdbjfkwrle kdnfn dknfjerlfd fdjdsflk dfjndsan f
+                    v uihjhjjkhh kkj jkh kj kb jk ku{" "}
+                  </p>
+                </div>
+                <div className="right">
+                  <h3>PLAN</h3>
+                  <p>
+                    lorel is ifjr gk jfkglsn fgnlfkd gknflngknhlg sdfgh fghk gf
+                    jhg ghhygg ugiguiu
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="right">
-              <h3>PLAN</h3>
-              <p>lorel is ifjr gk jfkglsn fgnlfkd gknflngknhlg sdfgh fghk gf jhg ghhygg ugiguiu</p>
-            </div>
-          </div>
-          </div>
           </div>
           <footer>
             <p>© Copyright 2020 MIT-Manipal</p>
